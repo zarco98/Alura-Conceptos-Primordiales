@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<h1>Programa Juego de lotería</h1>
+
+ <script>
+ 	function saltarLinea(){
+
+ 		document.write("<br>");
+ 		document.write("<br>");
+ 		document.write("<br>");
+ 	}
+
+ 	function imprimir (frase){
+
+ 		document.write(frase);
+ 		saltarLinea();
+ 	}
+	
+	function sorteo(n){
+
+		return Math.round(Math.random() * n);
+	}
+
+	var numero = Math.round(Math.random()*50);
+ 	var numeroPensado = sorteo(numero);
+ 	var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y " +numero));
+ 	
+ 	if (numeroPensado == numeroLanzado) {
+
+ 		imprimir("Usted acertó")
+ 	}
+
+ 	else {
+ 			if (numeroLanzado > numeroPensado) {
+
+ 				imprimir("Usted erró. El número sorteado es menor.")
+ 			}
+
+ 			else {
+		
+				imprimir("Usted erró. El número sorteado es mayor.")
+ 			}
+ 	}
+
+ </script>

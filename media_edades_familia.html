@@ -1,0 +1,61 @@
+<meta charset="UTF-8">
+
+<h1>Programa Calcular la media de las edades de una familia</h1>
+
+ <script>
+ 	function saltarLinea(){
+
+ 		document.write("<br>");
+ 		document.write("<br>");
+ 		document.write("<br>");
+ 	}
+
+ 	function imprimir (frase){
+
+ 		document.write(frase);
+ 		saltarLinea();
+ 	}
+
+ 	imprimir("<br>");
+	
+ 	var personas = parseInt(prompt("Ingrese el número de personas de la familia"));
+
+ 	// Bloque While
+ 	imprimir("WHILE");
+
+ 	var contador = 1;
+
+ 	var totalEdad = 0;
+
+ 	while(contador <= personas) {
+
+ 		var edadw = parseInt(prompt("WHILE: Ingrese la edad de esta persona"));
+ 		totalEdad = totalEdad + edadw;
+ 		imprimir("La edad de este integrante de la familia es: "+edadw);
+ 		contador++;
+ 	}
+
+	var promediow = Math.round(totalEdad/personas);
+
+ 	imprimir("El promedio de edad de esta familia es: " + promediow);
+
+ 	imprimir("<br>");
+
+ 	// Bloque For
+
+ 	imprimir("FOR");
+
+ 	var sumatoria = 0;
+
+ 	for (persona = 1; persona <= personas; persona++) {
+
+ 		var edad = parseInt(prompt("FOR: Ingrese la edad de esta persona"));
+ 		sumatoria = sumatoria + edad;
+ 		imprimir("La edad de este integrante de la familia es: "+edad);
+ 	}
+
+ 	var promedio = Math.round(sumatoria/personas);
+
+ 	imprimir("El promedio de edad de esta familia es: " + promedio);
+
+ </script>
